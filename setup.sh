@@ -10,7 +10,7 @@ echo "  1) Windows 2022"
 read -p "Pilih [1]: " PILIHOS
 
 case "$PILIHOS" in
-  1|"") PILIHOS=""
+  1|"") PILIHOS="https://master.dl.sourceforge.net/project/winsertodo/image_file/winserv2022_do.img.gz?viasf=1"
   *) echo "Pilihan salah, kode dihentikan..."; exit ;;
 esac
 
@@ -28,7 +28,7 @@ del /f /q "%temp%\Admin.vbs"
 exit /b 2)
 
 for /f "tokens=3*" %%i in ('netsh interface show interface ^|findstr /I /R "Local.* Ethernet Ins*"') do (set InterfaceName=%%j)
-netsh -c interface ip set address name="Ethernet Instance 0" source=static address=$IP_4 mask=255.255.240.0 gateway=$GW
+netsh -c interface ip set address name="Ethernet Instance 0" source=static address=$IP_dir4 mask=255.255.240.0 gateway=$GW
 netsh -c interface ip add dnsservers name="Ethernet Instance 0" address=8.8.8.8 index=1 validate=no
 netsh -c interface ip add dnsservers name="Ethernet Instance 0" address=8.8.4.4 index=2 validate=no
 
