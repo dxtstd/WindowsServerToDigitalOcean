@@ -6,11 +6,13 @@
 
 echo "Pilih OS yang ingin anda install"
 echo "  1) Windows 2022"
+echo "  5) Pakai link gz mu sendiri"
 
 read -p "Pilih [1]: " PILIHOS
 
 case "$PILIHOS" in
   1|"") PILIHOS="https://master.dl.sourceforge.net/project/winsertodo/image_file/winserv2022_do.img.gz?viasf=1";;
+  5) read -p "Masukkan Link GZ mu : " PILIHOS;;
   *) echo "Pilihan salah, kode dihentikan..."; exit ;;
 esac
 
