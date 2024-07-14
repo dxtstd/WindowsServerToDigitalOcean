@@ -10,7 +10,7 @@ echo "  1) Windows 2022"
 read -p "Pilih [1]: " PILIHOS
 
 case "$PILIHOS" in
-  1|"") PILIHOS="https://master.dl.sourceforge.net/project/winsertodo/image_file/winserv2022_do.img.gz?viasf=1"
+  1|"") PILIHOS="https://master.dl.sourceforge.net/project/winsertodo/image_file/winserv2022_do.img.gz?viasf=1";;
   *) echo "Pilihan salah, kode dihentikan..."; exit ;;
 esac
 
