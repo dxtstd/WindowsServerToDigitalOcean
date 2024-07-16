@@ -30,9 +30,9 @@ del /f /q "%temp%\Admin.vbs"
 exit /b 2)
 
 for /f "tokens=3*" %%i in ('netsh interface show interface ^|findstr /I /R "Local.* Ethernet Ins*"') do (set InterfaceName=%%j)
-netsh -c interface ip set address name="Ethernet Instance 0 2" source=static address=$IP_4 mask=255.255.240.0 gateway=$GW
-netsh -c interface ip add dnsservers name="Ethernet Instance 0 2" address=8.8.8.8 index=1 validate=no
-netsh -c interface ip add dnsservers name="Ethernet Instance 0 2" address=8.8.4.4 index=2 validate=no
+netsh -c interface ip set address name="Ethernet Instance 0" source=static address=$IP_dir4 mask=255.255.240.0 gateway=$GW
+netsh -c interface ip add dnsservers name="Ethernet Instance 0" address=8.8.8.8 index=1 validate=no
+netsh -c interface ip add dnsservers name="Ethernet Instance 0" address=8.8.4.4 index=2 validate=no
 
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
 netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
@@ -71,7 +71,7 @@ EOF
 
 wget --no-check-certificate -O- $PILIHOS | gunzip | dd of=/dev/vda bs=3M status=progress
 
-mount.ntfs-3g /dev/vda3 /mnt
+mount.ntfs-3g /dev/vda2 /mnt
 cd "/mnt/ProgramData/Microsoft/Windows/Start Menu/Programs/"
 cd Start* || cd start*; \
 cp -f /tmp/net.bat net.bat

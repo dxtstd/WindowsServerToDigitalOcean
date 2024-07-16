@@ -71,7 +71,7 @@ EOF
 
 wget --no-check-certificate -O- $PILIHOS | gunzip | dd of=/dev/vda bs=3M status=progress
 
-mount.ntfs-3g /dev/vda2 /mnt
+mount.ntfs-3g /dev/vda3 /mnt
 cd "/mnt/ProgramData/Microsoft/Windows/Start Menu/Programs/"
 cd Start* || cd start*; \
 cp -f /tmp/net.bat net.bat
