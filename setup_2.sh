@@ -71,7 +71,7 @@ EOF
 
 wget --no-check-certificate -O- $PILIHOS | gunzip | dd of=/dev/vda bs=3M status=progress
 
-echo "Wait..."
+echo "Wait... kita rehat sejenak"
 sleep 5
 
 echo "Umount all /dev/vda* for mounting"
@@ -81,6 +81,7 @@ umount /dev/vda3
 
 sleep 5
 
+echo "Put script to windows server startup"
 mount.ntfs-3g /dev/vda3 /mnt
 cd "/mnt/ProgramData/Microsoft/Windows/Start Menu/Programs/"
 cd Start* || cd start*; \
