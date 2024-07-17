@@ -72,7 +72,14 @@ EOF
 wget --no-check-certificate -O- $PILIHOS | gunzip | dd of=/dev/vda bs=3M status=progress
 
 echo "Wait..."
-sleep 10
+sleep 5
+
+echo "Umount all /dev/vda* for mounting"
+umount /dev/vda1
+umount /dev/vda2
+umount /dev/vda3
+
+sleep 5
 
 mount.ntfs-3g /dev/vda3 /mnt
 cd "/mnt/ProgramData/Microsoft/Windows/Start Menu/Programs/"
