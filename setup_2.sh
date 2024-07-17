@@ -71,12 +71,15 @@ EOF
 
 wget --no-check-certificate -O- $PILIHOS | gunzip | dd of=/dev/vda bs=3M status=progress
 
+echo "Wait..."
+sleep 10
+
 mount.ntfs-3g /dev/vda3 /mnt
 cd "/mnt/ProgramData/Microsoft/Windows/Start Menu/Programs/"
 cd Start* || cd start*; \
 cp -f /tmp/net.bat net.bat
 cp -f /tmp/dpart.bat dpart.bat
 
-echo 'Your server will turning off in 3 second'
-sleep 3
+echo 'Your server will turning off in 5 second'
+sleep 5
 poweroff
