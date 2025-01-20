@@ -5,13 +5,15 @@
 # dimodifikasi oleh dxtstd
 
 echo "Pilih OS yang ingin anda install"
-echo "  1) Windows 2022"
+echo "  1) Windows 2025"
+echo "  2) Windows 2022"
 echo "  5) Pakai link gz mu sendiri"
 
 read -p "Pilih [1]: " PILIHOS
 
 case "$PILIHOS" in
-  1|"") PILIHOS="https://master.dl.sourceforge.net/project/winsertodo/image_file/winserv2022_do.img.gz?viasf=1";;
+  1|"") PILIHOS="https://download1638.mediafire.com/xmrgvr6x6dpgcy5saPoXjONwcaLrELrAJEZiHhjvVfJN7-9wF4xM5dfKfbpuummRk8PKY1D5og4-lUHFcytHfRYkyI0LPmpJZzSGiA4PlO5BbideFYGaKRg7rJF0Ks8CAjX0r2l2REpvYz3EciG1p4sWLSZ35ACpsQRiyaNeGTFCBQ/ra9ifdin25yzvoa/ws2k25.img.gz";;
+  2|"") PILIHOS="https://download1334.mediafire.com/qngbf6uo4hcgQPIqwLNqeN-k1q4mQ5JUDqzrVWsqILhGqCLQL4-q6If3E6EkzNJ7ymMDfb1OmIyoBViYkunGEDuD2izXPYuR5263HONOSNevxlWh1i5i_C94z3xo5kFHqdbxJuMF8HYBV5GEcDtN8jmygDNmS0qanfz4XVvLm-Cy/14oa4xygk76vhmm/ws2k22.img.gz";;
   5) read -p "Masukkan Link GZ mu : " PILIHOS;;
   *) echo "Pilihan salah, kode dihentikan..."; exit ;;
 esac
