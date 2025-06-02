@@ -12,8 +12,8 @@ echo "  5) Pakai link gz mu sendiri"
 read -p "Pilih [1]: " PILIHOS
 
 case "$PILIHOS" in
-  1|"") PILIHOS="https://download1638.mediafire.com/xmrgvr6x6dpgcy5saPoXjONwcaLrELrAJEZiHhjvVfJN7-9wF4xM5dfKfbpuummRk8PKY1D5og4-lUHFcytHfRYkyI0LPmpJZzSGiA4PlO5BbideFYGaKRg7rJF0Ks8CAjX0r2l2REpvYz3EciG1p4sWLSZ35ACpsQRiyaNeGTFCBQ/ra9ifdin25yzvoa/ws2k25.img.gz";;
-  2|"") PILIHOS="https://download1334.mediafire.com/qngbf6uo4hcgQPIqwLNqeN-k1q4mQ5JUDqzrVWsqILhGqCLQL4-q6If3E6EkzNJ7ymMDfb1OmIyoBViYkunGEDuD2izXPYuR5263HONOSNevxlWh1i5i_C94z3xo5kFHqdbxJuMF8HYBV5GEcDtN8jmygDNmS0qanfz4XVvLm-Cy/14oa4xygk76vhmm/ws2k22.img.gz";;
+  1|"") PILIHOS="https://download1638.mediafire.com/poux3rz773agcGl0hFT5dhP5SDf-uOwhJ69CQ-q4bOqn2OvBB10oa7XQtMHjIBrDllo7gZZ3S7zfPcZRkGz4C_Ks6gCoHWzAYxwOXv4vN0_16_abDJkDqNEIeXxiH14qHAnmO9KxMt0Zq7Tr8LVdaWDJJ3seUwupfHw8GdRN1F3xKg/ra9ifdin25yzvoa/ws2k25.img.gz";;
+  2|"") PILIHOS="https://download1334.mediafire.com/r4w1yzviogpgtzYf4eCROTJGPaVFSfaGnogg7KNks028tGchGQ7RGAjHJ-dTJYTyl8uFbzYa7SxrsZ88wFE-iDr7b6tmMLq3Ncw18j97_7uYmhG9Ds7plQIseHorBTr_kC7fKPOOB3M9H63SYrRdp13txb7VN-LMHcSt9MN-uof8CA/14oa4xygk76vhmm/ws2k22.img.gz";;
   5) read -p "Masukkan Link GZ mu : " PILIHOS;;
   *) echo "Pilihan salah, kode dihentikan..."; exit ;;
 esac
